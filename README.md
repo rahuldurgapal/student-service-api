@@ -1,7 +1,6 @@
 # Student Service API
 
-The Student Service API is a spirng-boot based RESTful API to decide the Student eligibility for scholarships based one their marks. In this we store the information about student
-detail by readind csv file and also update the eligible criteria for scholarship
+The Student Service API is a Spring Boot-based RESTful API designed to determine student eligibility for scholarships based on their marks. It reads and processes student details from CSV files and allows updating of the eligibility criteria for scholarships.
 
 ## Features
 
