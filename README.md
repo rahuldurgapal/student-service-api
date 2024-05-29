@@ -119,6 +119,7 @@ This API decides student eligibility for scholarships based on their marks. Belo
 
 ## File Structure
 
+```bash
 studentservice
 │
 ├── src
@@ -152,6 +153,9 @@ studentservice
 ├── pom.xml
 └── mvnw
 └── mvnw.cmd
+
+```
+
 
     
 
