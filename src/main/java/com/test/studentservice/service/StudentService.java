@@ -31,7 +31,7 @@ public class StudentService {
         eligibleCriteria.put("science",85);
         eligibleCriteria.put("math",90);
         eligibleCriteria.put("english",75);
-        eligibleCriteria.put("computer",75);
+        eligibleCriteria.put("computer",95);
     }
 
     public void updateEligibleCriteria(Map<String, Integer> criteria) {
@@ -53,7 +53,7 @@ public class StudentService {
     public Student findStudentByrollNo(String rollNo) {
         return studentRepository.findById(rollNo).orElse(null);
     }
-
+  
     public void checkEligible(Student student) {
       
      boolean check;

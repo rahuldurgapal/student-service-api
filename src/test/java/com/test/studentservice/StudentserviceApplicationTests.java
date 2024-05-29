@@ -29,7 +29,7 @@ class StudentserviceApplicationTests {
                 "roll number,student name,science,maths,english,computer,Eligible\n100101,Rahul Durgapal,87,89,76,94,ToBeChecked".getBytes()
         );
 
-		mockMvc.perform(MockMvcRequestBuilders.multipart("/students/upload")
+		mockMvc.perform(MockMvcRequestBuilders.multipart("/student/upload")
 		.file(file))
 		.andReturn();
 
@@ -40,13 +40,13 @@ class StudentserviceApplicationTests {
 	@Test
 	void testFindStudentByRollNo() throws Exception {
 
-		mockMvc.perform(MockMvcRequestBuilders.get("students/search/100101"))
+		mockMvc.perform(MockMvcRequestBuilders.get("student/search/100101"))
 		.andReturn();
 	}
 
 	@Test
 	void testUpdateCriteria() throws Exception {
-		mockMvc.perform(MockMvcRequestBuilders.put("/students/criteria")
+		mockMvc.perform(MockMvcRequestBuilders.put("/student/update-criteria")
 		       .contentType(MediaType.APPLICATION_JSON)
 			   .content("{\"science\": 80, \"maths\": 85, \"english\": 70, \"computer\": 90}"))
 			   .andReturn();
