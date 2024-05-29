@@ -33,7 +33,7 @@ detail by readind csv file and also update the eligible criteria for scholarship
 1. **Clone the Repository:** `git clone <repository-url>`
 2. **Navigate to Project Directory:** `cd <project-directory>`
 3. **Set Up MySQL Database:**
-   - Create a database: `CREATE DATABASE student_service;`
+   - Create a database: `CREATE DATABASE studentservice;`
    - Update `application.properties` with your MySQL credentials.
 4. **Build the Project:** `mvn clean install`
 5. **Run the Application:** `mvn spring-boot:run`pring-boot:run
@@ -116,6 +116,43 @@ This API decides student eligibility for scholarships based on their marks. Belo
       ...
     ]
     ```
+
+## File Structure
+
+studentservice
+│
+├── src
+│   ├── main
+│   │   ├── java
+│   │   │   └── com
+│   │   │       └── test
+│   │   │           └── studentservice
+│   │   │               ├── config
+│   │   │               │   └── SwaggerConfig.java
+│   │   │               ├── controller
+│   │   │               │   └── StudentController.java
+│   │   │               ├── model
+│   │   │               │   └── Student.java
+│   │   │               ├── repository
+│   │   │               │   └── StudentRepository.java
+│   │   │               ├── service
+│   │   │               │   ├── StudentService.java
+│   │   │               │   └── InspectCsvSerice.java
+│   │   │               └── StudentServiceApplication.java
+│   │   ├── resources
+│   │   │   ├── application.properties
+│   └── test
+│       ├── java
+│       │   └── com
+│       │       └── test
+│       │           └── studentservice
+│       │               └── StudentServiceApplicationTests.java
+├── .gitignore
+├── README.md
+├── pom.xml
+└── mvnw
+└── mvnw.cmd
+
     
 
 
