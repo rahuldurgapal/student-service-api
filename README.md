@@ -48,7 +48,7 @@ This API decides student eligibility for scholarships based on their marks. Belo
 ## Endpoints
 
 ### Upload CSV File
-- **URL:** `/api/students/upload`
+- **URL:** `/student/upload`
 - **Method:** `POST`
 - **Description:** Upload a CSV file and kick off the processing.
 - **Request:**
@@ -56,7 +56,7 @@ This API decides student eligibility for scholarships based on their marks. Belo
   - Parameter: `file` (CSV file to upload)
 
 ### Update Eligibility Criteria
-- **URL:** `/api/criteria`
+- **URL:** `/student/update-criteria`
 - **Method:** `PUT`
 - **Description:** Update the dynamic scholarship eligibility criteria.
 - **Request:**
@@ -72,7 +72,7 @@ This API decides student eligibility for scholarships based on their marks. Belo
     ```
 
 ### Get Student Eligibility by Roll Number
-- **URL:** `/api/students/{rollNumber}`
+- **URL:** `/student/search/{rollNumber}`
 - **Method:** `GET`
 - **Description:** Retrieve the eligibility status of a student by roll number.
 - **Response:**
@@ -95,26 +95,7 @@ This API decides student eligibility for scholarships based on their marks. Belo
     }
     ```
 
-### Get All Students
-- **URL:** `/api/students`
-- **Method:** `GET`
-- **Description:** Retrieve all student records.
-- **Response:**
-  - `200 OK`: 
-    ```json
-    [
-      {
-        "rollNumber": "100101",
-        "name": "Vivek Sharma",
-        "science": 86,
-        "maths": 89,
-        "english": 78,
-        "computer": 92,
-        "eligible": "YES"
-      },
-      ...
-    ]
-    ```
+
 
 ## File Structure
 
